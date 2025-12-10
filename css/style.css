@@ -722,22 +722,3 @@ html{
 }
 
 .service-media img { width:100%; height:100%; object-fit:cover; display:block; }
-
-/* ==== TEXT OUTLINE FOR HERO ==== */
-.outline-title {
-  color: white;
-  text-shadow:
-    -3px -3px 0 black,
-     3px -3px 0 black,
-    -3px  3px 0 black,
-     3px  3px 0 black;
-}
-
-.outline-text {
-  color: white;
-  text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
-}
