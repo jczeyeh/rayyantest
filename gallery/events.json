@@ -6,11 +6,6 @@
       "title": "Event1"
     },
     {
-      "folder": "event10",
-      "cover": "10.jpg",
-      "title": "Event10"
-    },
-    {
       "folder": "event2",
       "cover": "2.jpg",
       "title": "Event2"
@@ -49,6 +44,11 @@
       "folder": "event9",
       "cover": "9.jpg",
       "title": "Event9"
+    },
+    {
+      "folder": "event10",
+      "cover": "10.jpg",
+      "title": "Event10"
     }
   ]
 }
