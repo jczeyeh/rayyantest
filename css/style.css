@@ -184,6 +184,25 @@ html{
   opacity:.85;
   font-size:.98rem;
 }
+/* ---------------------- */
+/* Service Media Container */
+/* ---------------------- */
+.service-media {
+  height: 100%;
+  width: 100%;
+  border-radius: 22px 0 0 22px;
+  overflow: hidden;
+  border-right: 1px solid rgba(231,201,128,.35);
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.service-media img {
+  width: 100%;         /* image takes full width of container */
+  height: 100%;        /* image takes full height of container */
+  object-fit: cover;   /* fills container while keeping aspect ratio, may crop */
+  display: block;      /* removes small gaps below image */
+}
 
 /* ===== Featured Events Gallery: 3‑card carousel ===== */
 .gallery-wrapper{
