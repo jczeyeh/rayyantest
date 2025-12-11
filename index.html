@@ -193,39 +193,43 @@
     <h2 class="title">Showreel</h2>
     <div class="video-wrap">
       <iframe
-        id="showreelVideo"
-        src="https://www.youtube.com/embed/-oe6WL2_2Rc?enablejsapi=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"
-      ></iframe>
-    </div>
-  </div>
-</section>
+  id="showreelVideo"
+  src="https://www.youtube.com/embed/-oe6WL2_2Rc?enablejsapi=1&mute=1"
+  title="Showreel"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  loading="lazy"
+></iframe>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
   let player;
-  
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('showreelVideo');
-  }
 
-  // Observe when the video enters the viewport
-  const videoSection = document.getElementById('showreel');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && player) {
-        player.playVideo();
-      } else if (player) {
-        player.pauseVideo();
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('showreelVideo', {
+      events: {
+        'onReady': onPlayerReady
       }
     });
-  }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+  }
 
-  observer.observe(videoSection);
+  function onPlayerReady(event) {
+    const videoSection = document.getElementById('showreel');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          event.target.mute();       // Mute before autoplay
+          event.target.playVideo();  // Autoplay when in view
+        } else {
+          event.target.pauseVideo(); // Pause when out of view
+        }
+      });
+    }, { threshold: 0.5 }); // Play when 50% visible
+
+    observer.observe(videoSection);
+  }
 </script>
 
 
