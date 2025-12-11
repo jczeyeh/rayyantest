@@ -243,17 +243,17 @@
   function onPlayerReady(event) {
     const videoSection = document.getElementById('showreel');
 
-    // IntersectionObserver to autoplay/pause video when in view
+    // Play/pause only when visible
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          player.mute();       // Ensure muted
-          player.playVideo();  // Autoplay
+          player.mute();       // must mute for autoplay
+          player.playVideo();  // autoplay
         } else {
-          player.pauseVideo(); // Pause when out of view
+          player.pauseVideo();
         }
       });
-    }, { threshold: 0.5 }); // Trigger when 50% visible
+    }, { threshold: 0.5 });
 
     observer.observe(videoSection);
   }
