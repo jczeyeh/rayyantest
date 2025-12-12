@@ -744,3 +744,22 @@ html{
   box-shadow: 0 25px 80px rgba(0,0,0,0.7);
   z-index: 20;
 }
+
+/* === Lightbox overlay === */
+.page-event #lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.page-event #lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  transition: transform 0.3s ease;
+}
