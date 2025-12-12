@@ -745,21 +745,23 @@ html{
   z-index: 20;
 }
 
-/* === Lightbox overlay === */
-.page-event #lightbox-overlay {
+#lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.page-event #lightbox-overlay img {
+#lightbox-overlay img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 20px;
   box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  cursor: auto;
   transition: transform 0.3s ease;
 }
