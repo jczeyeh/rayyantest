@@ -4,10 +4,11 @@
 .carousel-item{opacity:0.4;transform:scale(0.8);transition:0.4s;}
 .carousel-item.active{opacity:1;transform:scale(1);}
 .carousel-item img{
-  width:400px;
-  height:300px;        /* set container height */
-  object-fit:contain;  /* FIT image fully */
-  background:#000;     /* optional black behind the image */
+  width:100%;
+  max-width:400px;
+  aspect-ratio: 16/9;   /* or 4/3 if your images are more square */
+  object-fit:contain;   /* no crop */
+  background:#000;
   border-radius:20px;
 }
 .caption{text-align:center;margin-top:10px;color:white;font-size:14px;}
