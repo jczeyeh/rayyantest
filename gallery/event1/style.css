@@ -1,7 +1,0 @@
-.event-gallery-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills area, crops edges */
-  display: block;
-  border-radius: 8px;  /* optional */
-}
