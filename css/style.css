@@ -766,42 +766,46 @@ html{
   transition: transform 0.3s ease;
 }
 
-/* Hamburger button */
+/* Hamburger */
 .nav-toggle{
   display:none;
   background:none;
   border:0;
   color:var(--gold);
-  font-size:1.8rem;
+  font-size:2rem;
   cursor:pointer;
+  z-index:6;
 }
 
-/* Mobile nav */
+/* Mobile menu */
 @media (max-width: 768px){
   .nav-toggle{ display:block; }
+
+  header{ position:sticky; }
 
   nav{
     position:absolute;
     top:100%;
     left:0;
     right:0;
-    background:rgba(10,12,15,.95);
-    backdrop-filter:blur(12px);
+    background:rgba(10,12,15,.96);
+    backdrop-filter:blur(14px);
+    display:flex;
     flex-direction:column;
-    gap:0;
+    align-items:center;
     max-height:0;
     overflow:hidden;
     transition:max-height .35s ease;
-    border-bottom:1px solid rgba(231,201,128,.18);
+    z-index:5;
+  }
+
+  nav.open{
+    max-height:520px;
   }
 
   nav a{
     padding:18px;
     width:100%;
     text-align:center;
-  }
-
-  nav.open{
-    max-height:480px;
   }
 }
