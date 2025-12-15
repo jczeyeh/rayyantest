@@ -144,17 +144,6 @@ const filmEase=cubicBezier(.77,0,.175,1);
   });
 })();
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('header nav');
-
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-
   // close after clicking a link
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
