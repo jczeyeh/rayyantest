@@ -778,27 +778,6 @@ html{
 }
 
 /* Mobile menu */
-@media (max-width: 768px){
-  .nav-toggle{ display:block; }
-
-  header{ position:sticky; }
-
-  nav{
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    background:rgba(10,12,15,.96);
-    backdrop-filter:blur(14px);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .35s ease;
-    z-index:5;
-  }
-
   nav.open{
     max-height:520px;
   }
