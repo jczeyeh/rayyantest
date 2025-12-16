@@ -851,3 +851,11 @@ html{
     animation:none;
   }
 }
+
+header{
+  z-index: 1000;
+}
+
+nav{
+  z-index: 1001;
+}
