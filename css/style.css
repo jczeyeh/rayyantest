@@ -81,7 +81,7 @@ nav a:hover::after,nav a.active::after{width:100%}
   section{scroll-margin-top:84px}
 }
 .video-background {
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 /* Navbar brand (logo + gold title) */
