@@ -19,7 +19,7 @@ section{scroll-margin-top:96px}
 
 
 /* Header nav */
-header{position:sticky;top:0;z-index:4;background:rgba(10,12,15,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(231,201,128,.18)}
+header{position:sticky;overflow:visible;top:0;z-index:4;background:rgba(10,12,15,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(231,201,128,.18)}
 .nav-wrap{display:flex;align-items:center;justify-content:flex-end;gap:24px;height:96px}
 nav{display:flex;gap:36px;white-space:nowrap;align-items:center;justify-content:center;margin-left:auto}
 nav a{color:var(--text);text-decoration:none;font-weight:800;font-size:1.06rem;letter-spacing:.02em;padding:16px 8px;position:relative;line-height:1}
