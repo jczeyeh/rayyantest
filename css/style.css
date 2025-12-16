@@ -806,6 +806,10 @@ html{
   }
 }
 
+.nav-wrap{
+  position: relative;
+}
+
 @media (max-width: 640px){
   .whatsapp{
     right:12px;
