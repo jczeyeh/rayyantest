@@ -80,6 +80,9 @@ nav a:hover::after,nav a.active::after{width:100%}
   nav a{font-size:.98rem}
   section{scroll-margin-top:84px}
 }
+.video-background {
+  pointer-events: auto;
+}
 
 /* Navbar brand (logo + gold title) */
 .brand{display:flex;align-items:center;gap:12px;min-width:260px}
