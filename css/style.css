@@ -160,6 +160,7 @@ html{
   padding:26px;
   display:flex;
   flex-direction:column;
+  justify-content: center;
 }
 .service-panel-body h3{
   text-align:center;
@@ -194,13 +195,14 @@ html{
 /* ---------------------- */
 .service-media {
   height: 100%;
+  min-height: 280px;
   width: 100%;
   border-radius: 22px 0 0 22px;
   overflow: hidden;
   border-right: 1px solid rgba(231,201,128,.35);
   padding: 0;
   margin: 0;
-  display: block;
+  display: flex;
 }
 .service-media img {
   width: 100%;         /* image takes full width of container */
