@@ -48,6 +48,29 @@ const filmEase=cubicBezier(.77,0,.175,1);
   }),{passive:false});
 })();
 
+<script>
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('header nav');
+  const body = document.body;
+
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    body.classList.toggle('nav-open', isOpen);
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      body.classList.remove('nav-open');
+    });
+  });
+})();
+</script>
+
 // Active link spy
 (function(){
   const sections=[
