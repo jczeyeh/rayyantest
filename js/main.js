@@ -128,19 +128,23 @@ const filmEase=cubicBezier(.77,0,.175,1);
   window.addEventListener('scroll',toggle,{passive:true});
 })();
 
-// Mobile nav toggle
+// Mobile nav toggle (FINAL)
 (function(){
   const btn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('header nav');
+  const body = document.body;
   if(!btn || !nav) return;
 
   btn.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const open = nav.classList.toggle('open');
+    body.classList.toggle('nav-open', open);
   });
 
-  // Close menu on link click
+  // Close menu when clicking a link
   nav.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click',()=>nav.classList.remove('open'));
+    a.addEventListener('click',()=>{
+      nav.classList.remove('open');
+      body.classList.remove('nav-open');
+    });
   });
 })();
-
