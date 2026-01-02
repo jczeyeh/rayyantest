@@ -770,16 +770,6 @@ html{
   transition: transform 0.3s ease;
 }
 
-/* Hamburger button */
-.nav-toggle{
-  display:none;
-  background:none;
-  border:0;
-  color:var(--gold);
-  font-size:1.8rem;
-  cursor:pointer;
-}
-
 
 @media (max-width: 640px){
   .whatsapp{
@@ -831,52 +821,6 @@ nav{
   z-index: 1001;
 }
 
-/* === MOBILE NAV FIX === */
-.nav-wrap{
-  position: relative;
-}
-
-header{
-  overflow: visible;
-  z-index: 1000;
-}
-
-@media (max-width: 768px){
-  .nav-toggle{
-    display:block;
-    z-index:1002;
-  }
-
-  nav{
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-
-    background:rgba(10,12,15,.97);
-    backdrop-filter:blur(12px);
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .35s ease;
-
-    z-index:1001;
-  }
-
-  nav.open{
-    max-height:520px;
-  }
-
-  nav a{
-    width:100%;
-    padding:18px 0;
-    text-align:center;
-  }
-}
 
 /* === MOBILE NAV (FINAL) === */
 .nav-wrap{
@@ -935,3 +879,68 @@ header{
   }
 }
 
+/* === FINAL MOBILE NAV (CLEAN & WORKING) === */
+
+.nav-wrap{
+  position: relative;
+}
+
+header{
+  overflow: visible;
+  z-index: 1000;
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--gold);
+  font-size:1.9rem;
+  cursor:pointer;
+}
+
+/* Mobile only */
+@media (max-width: 768px){
+  .nav-toggle{
+    display:block;
+    z-index:1002;
+  }
+
+  nav{
+    position:fixed;
+    top:76px; /* header height */
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:rgba(10,12,15,.98);
+    backdrop-filter:blur(14px);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.4,0,.2,1);
+
+    z-index:1001;
+  }
+
+  nav.open{
+    transform:translateY(0);
+  }
+
+  nav a{
+    width:100%;
+    padding:18px 0;
+    text-align:center;
+    font-size:1.15rem;
+    letter-spacing:.08em;
+  }
+}
+
+/* Lock scroll when menu open */
+body.nav-open{
+  overflow:hidden;
+}
