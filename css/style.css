@@ -147,7 +147,7 @@ html{
   overflow:hidden;
   border:1px solid rgba(231,201,128,.35);
   box-shadow:0 18px 60px rgba(0,0,0,.55);
-  min-height:240px;
+  min-height:280px;
 }
 .service-media{
   position:relative;
@@ -157,20 +157,15 @@ html{
   background:radial-gradient(circle at 0 0,rgba(231,201,128,.18),rgba(7,9,12,1));
 }
 .service-panel-body{
-  padding:26px 26px 22px 26px;
+  padding:26px;
   display:flex;
   flex-direction:column;
-  justify-content:center;
 }
 .service-panel-body h3{
-  margin:0 0 10px;
-  font-size:1.15rem;
+  text-align:center;
 }
 .service-panel-body ul{
-  margin:0;
-  padding-left:18px;
-  line-height:1.6;
-  font-size:.96rem;
+  margin-top:auto; /* pushes list down evenly */
 }
 .service-panel-body li + li{
   margin-top:2px;
